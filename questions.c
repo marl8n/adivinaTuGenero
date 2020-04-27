@@ -1,24 +1,24 @@
 #include "questions.h"
 #include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
+#include <stdlib.h>
 
 void menquestion()
 {
-	char * mensq[10] = {"aa","bb","cc","dd","ee","ff","gg","hh","ii","jj"};
+	char mensq[][80] = {"aa","bb","cc","dd","ee","ff","gg","hh","ii","jj"};
 	int defineq, qdirectory;
 	srand(time(NULL));
 	defineq = rand();
 	qdirectory = rand() % 9;
-	printf("%s", menquestion[qdirectory]);
+	printf("%s", mensq[qdirectory]);
 }
 
 void womanquestion()
 {
-	char * womensq[10] = {"11","22","33","44","55","66","77","88","99","10"};
+	char womensq[][80] = {"11","22","33","44","55","66","77","88","99","10"};
 	int defineq, qdirectory;
 	srand(time(NULL));
 	defineq = rand();
 	qdirectory = rand() % 9;
-	printf("%s", menquestion[qdirectory]);
+	printf("%s", womensq[qdirectory]);
 }
